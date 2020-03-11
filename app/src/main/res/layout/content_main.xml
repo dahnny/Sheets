@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#006699"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <fragment
+        android:id="@+id/fragment"
+        android:name="com.danielogbuti.myapplication.topFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierAllowsGoneWidgets="true"
+        app:chainUseRtl="true"
+        app:layout_constrainedHeight="true"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toTopOf="@+id/fragment2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.64"
+        tools:ignore="MissingConstraints"
+        tools:layout="@layout/topfragment" />
+
+    <fragment
+        android:id="@+id/fragment2"
+        android:name="com.danielogbuti.myapplication.bottomFragment"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="16dp"
+        app:barrierAllowsGoneWidgets="true"
+        app:chainUseRtl="true"
+        app:layout_constrainedHeight="true"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout="@layout/bottomfragment" />
+</android.support.constraint.ConstraintLayout>
